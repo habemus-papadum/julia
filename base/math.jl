@@ -611,6 +611,7 @@ for func in (:atan2,:hypot)
 end
 
 ldexp(a::Float16, b::Integer) = Float16(ldexp(Float32(a), b))
+cbrt(a::Float16) = Float16(cbrt(Float32(a)))
 
 # More special functions
 include("special/trig.jl")
